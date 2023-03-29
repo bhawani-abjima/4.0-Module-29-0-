@@ -1,0 +1,125 @@
+﻿using System;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography;
+
+namespace newprogram
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+             int A1, A2, A3, Sum;
+            int DateTime;
+
+            int monthlywage=1234;
+            int months=12,bonus=1000;
+
+            
+            
+            bool isactive = true;
+            double rating = 99.25;
+
+            // byte numberofemployees = 300;
+
+            // monthlywage = true;  Converting issue
+
+            double rateperhour = 12.34;
+            int numberofhoursworked = 165;
+
+            double currentmonthlywage = rateperhour * numberofhoursworked+bonus;
+
+            Console.WriteLine(currentmonthlywage);
+
+            rateperhour += 3;
+
+            if(currentmonthlywage>2000)
+            {
+                Console.WriteLine("Top paid employee");
+            }
+            int numberofemployees =15;
+            numberofemployees--;
+
+           int maxvalue=int.MaxValue;                //working with data members int and char
+           int minvalue=Int32.MinValue;   
+
+           char userselection = 'a';
+
+            char upperversion = char.ToUpper(userselection);
+            bool isDigit=char.IsDigit(userselection);
+            bool isLetter=char.IsLetter(userselection);
+
+
+             Console.WriteLine("Enter 1st angle value:");
+             A1 = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("Enter 2nd angle value:");
+             A2 = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("Enter 3rd angle value:");
+             A3 = Convert.ToInt32(Console.ReadLine());
+
+             Sum = A1 + A2 + A3;
+
+             if(Sum<=180)
+             {
+                 Console.WriteLine("It is a Triangle");
+             }
+             else 
+             {
+                 Console.WriteLine("No a triangle");
+             }
+
+
+            DateTime hiredate = new DateTime(2021, 3, 28, 14, 30, 0);
+            Console.WriteLine(hiredate);
+
+                               
+                                   //representation of date and time
+
+            
+
+            long verylongmonth = numberofhoursworked;
+            double d = 163851.4;
+            int x = (int)d;
+            
+
+            
+
+            string firstname = "bethany";   //operation with strings
+            string secondname = "nitesh";
+            string thirdname = "kavita";
+            string fourthname = "karina";
+
+
+            Console.WriteLine("Are both names equal" + (firstname == secondname));
+            Console.WriteLine("Are both names equal" + (firstname == "bethany"));
+            Console.WriteLine("Are both names equal" + (secondname == "nitesh "));
+
+            int monthlywage1 = 1234;
+            int months1 = 12;
+            int yearlywage= calculateyearwage(monthlywage, months);                 //calculating wages for employees
+
+
+            Console.WriteLine($"yearly wage(from main):{yearlywage}");
+
+                
+            Console.ReadLine();
+        }
+        public static int calculateyearwage(int monthlywage1, int numberoftheworked1)
+        {
+            if (numberoftheworked1 == 12)
+                return monthlywage1 * (numberoftheworked1 + 1);
+
+            return monthlywage1* numberoftheworked1;
+        }
+        public static int calculateyearwage(int monthlywage1,int numberoftheworked1,int bonus  )
+        {
+            Console.WriteLine($"the yearly wage is: {monthlywage1 * numberoftheworked1 + bonus}");
+            return monthlywage1 * numberoftheworked1+ bonus;
+            
+             
+
+            Console.BackgroundColor = ConsoleColor.DarkGreen;     //using background for changing color for text and background
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
+        }
+    }
+}
